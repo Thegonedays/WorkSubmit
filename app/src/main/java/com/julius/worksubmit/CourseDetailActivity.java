@@ -27,12 +27,13 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class CourseDetailActivity extends AppCompatActivity implements View.OnClickListener {
+    private final String URL = "http://47.107.119.38:8080/";
     //获取课程信息地址
-    private final String GET_TASKS_URL = "http://192.168.0.105:8080/jobmanagementsystem/getTasks";
+    private final String GET_TASKS_URL = URL + "getTasks";
     //检查是否已经提交过
-    private final String TASK_IS_SUBMIT = "http://192.168.0.105:8080/jobmanagementsystem/taskIsSubmit";
+    private final String TASK_IS_SUBMIT = URL + "taskIsSubmit";
     //上传作业
-    private final String TASK_UPLOAD_FILE = "http://192.168.0.105:8080/jobmanagementsystem/appUpload";
+    private final String TASK_UPLOAD_FILE = URL + "appUpload";
 
     private Button selectFile;
     private Button submit;

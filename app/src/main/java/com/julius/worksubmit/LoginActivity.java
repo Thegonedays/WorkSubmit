@@ -37,7 +37,7 @@ public class LoginActivity extends Activity implements View.OnClickListener {
     private SharedPreferences.Editor sp = null;
     //private final String LOGIN_URL = "http://localhost:8080/jobmanagementsystem/appLogin";
     //本地
-    private final String LOGIN_URL = "http://192.168.0.105:8080/jobmanagementsystem/appLogin";
+    private final String LOGIN_URL = "http://47.107.119.38:8080/jobmanagementsystem/appLogin";
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
