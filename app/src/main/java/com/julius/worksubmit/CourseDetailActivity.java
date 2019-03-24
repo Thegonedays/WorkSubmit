@@ -27,7 +27,7 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class CourseDetailActivity extends AppCompatActivity implements View.OnClickListener {
-    private final String URL = "http://47.107.119.38:8080/";
+    private final String URL = "http://47.107.119.38:8080/jobmanagementsystem/";
     //获取课程信息地址
     private final String GET_TASKS_URL = URL + "getTasks";
     //检查是否已经提交过

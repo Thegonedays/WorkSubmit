@@ -35,8 +35,9 @@ public class LoginActivity extends Activity implements View.OnClickListener {
     //保存文件名,存储模式(此处采用私有模式)
     private SharedPreferences preferences;
     private SharedPreferences.Editor sp = null;
-    //private final String LOGIN_URL = "http://localhost:8080/jobmanagementsystem/appLogin";
+
     //本地
+//    private final String LOGIN_URL = "http://localhost:8080/jobmanagementsystem/appLogin";
     private final String LOGIN_URL = "http://47.107.119.38:8080/jobmanagementsystem/appLogin";
 
     @Override
@@ -120,27 +121,8 @@ public class LoginActivity extends Activity implements View.OnClickListener {
 
     //用户注册
     private void register() {
-        Common.showToast("暂不提供注册", this);
-
-//        final Intent intent = new Intent(this, RegisterActivity.class);
-//        RegisterPage page = new RegisterPage();
-//        //如果使用我们的ui，没有申请模板编号的情况下需传null
-//        page.setTempCode(null);
-//        page.setRegisterCallback(new EventHandler() {
-//            public void afterEvent(int event, int result, Object data) {
-//                if (result == SMSSDK.RESULT_COMPLETE) {
-//                    // 处理成功的结果
-//                    HashMap<String, Object> phoneMap = (HashMap<String, Object>) data;
-//                    String country = (String) phoneMap.get("country"); // 国家代码，如“86”
-//                    String mobile = (String) phoneMap.get("phone"); // 手机号码，如“13800138000”
-//                    intent.putExtra("mobile", mobile);
-//                    startActivity(intent);
-//                } else {
-//                    Common.showToast("系统出错,请稍后再试!", Common.getContext());
-//                }
-//            }
-//        });
-//        page.show(Common.getContext());
+        Intent intent = new Intent(this, RegisterActivity.class);
+        startActivity(intent);
     }
 
     /**

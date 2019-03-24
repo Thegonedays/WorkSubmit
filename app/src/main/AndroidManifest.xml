@@ -37,7 +37,10 @@
         <activity
             android:name=".CourseDetailActivity"
             android:label="作业提交" />
-        <activity android:name=".SelectFileActivity"></activity>
+        <activity android:name=".SelectFileActivity" />
+        <activity
+            android:name=".RegisterActivity"
+            android:label="用户注册" />
     </application>
 
 </manifest>
