@@ -28,6 +28,7 @@ import java.util.List;
 
 public class CourseDetailActivity extends AppCompatActivity implements View.OnClickListener {
     private final String URL = "http://47.107.119.38:8080/jobmanagementsystem/";
+//    private final String URL = "http://192.168.0.105:8080/";
     //获取课程信息地址
     private final String GET_TASKS_URL = URL + "getTasks";
     //检查是否已经提交过
@@ -84,10 +85,6 @@ public class CourseDetailActivity extends AppCompatActivity implements View.OnCl
     private void checkIsSubmit() {
         int position = spinner.getSelectedItemPosition();
         String text = spinner.getSelectedItem().toString();
-        if ("全部".equals(text)) {
-            Common.showToast("请选择课程", Common.getContext());
-            return;
-        }
         //获取学生本地化存储信息
         SharedPreferences sp = Common.getSharePreferences(this,
                 Common.USER_INFORMATION);
@@ -156,9 +153,6 @@ public class CourseDetailActivity extends AppCompatActivity implements View.OnCl
         x.http().post(params, new Callback.CacheCallback<String>() {
             @Override
             public void onSuccess(String result) {
-                if (result.length() < 10) {
-                    return;
-                }
                     /*
                      不能调用toString()方法对字符串再次进行加工
                      * 不能使用Handler机制,去包装result再次进行发送
@@ -244,7 +238,7 @@ public class CourseDetailActivity extends AppCompatActivity implements View.OnCl
                 //获取每个属性封装到javaBean对象中
                 Integer taskId = object.getInteger("taskId");
                 if (taskId != null) {
-                    task.setTaskId(object.getInteger("taskId"));
+                    task.setTaskId(taskId);
                 }
                 String taskName = object.getString("taskName");
                 if (taskName != null) {
